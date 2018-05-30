@@ -345,7 +345,8 @@ span.text-content p {
   grid-area: leadtext;
   width: 60vw;
   font-size: 24px;
-  line-height: 30px;
+  font-weight: 500;
+  line-height: 34px;
   margin-top: 25vh;  
 }
 
