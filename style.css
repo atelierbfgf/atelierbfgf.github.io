@@ -352,15 +352,15 @@ span.text-content p {
 .lefttext {
   grid-area: lefttext;
   width: 30vw;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .righttext {
   grid-area: righttext;
   width: 30vw;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 /* ============ PROJECT IMAGE PAGES ============ */
