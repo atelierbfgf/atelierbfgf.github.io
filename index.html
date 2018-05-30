@@ -2,12 +2,153 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Coming Soon!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>BFGF</title>
+	
+	<!-- CSS -->
 	<link rel="stylesheet" href="style.css">
+
+	<!-- FONTS -->
+	<link rel="stylesheet" href="https://use.typekit.net/rtm2dtx.css">
+
+	<!-- Smooth Scroll -->
+    <script src="assets/js/smoothscroll.js"></script>
+
+    <!-- Overlay Transition -->
+	<script>
+	  function openNav() {
+	  document.getElementById("myNav").style.width = "100%";
+	  }
+
+	  function closeNav() {
+	  document.getElementById("myNav").style.width = "0%";
+	  }
+	</script>
+
 </head>
 <body>
-
-
 	
+<div class="container">
+	
+  <section id="hero">
+  	
+	<!-- Nav -->
+
+	<div id="nav">
+	  <ul>
+	    <a href="index.html#portfolio"><li><span id="item1">portfolio</span></li></a>
+		<a href="index.html#aboutus"><li><span id="item2">about</span></li></a>
+		<!-- <a href="#"><li><span id="item3">services</span></li></a> -->
+	  	<a href="mailto:hello@atelierbfgf.com" id="rightify"><li><span>hello@atelierbfgf.com</span><li></a>
+	  </ul>
+
+	  <img src="assets/images/BGFG-logo.png" id="navlogo" alt="BFGF Logo">
+
+	  <div id="mobilenav"> 
+	    <span id="burger" onclick="openNav()">&#9776;</span>
+      </div>
+
+	</div>
+
+	<!-- Mobile Nav -->
+
+  	
+  	<div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  
+	  <div class="overlay-content">
+	    <a href="index.html#aboutus" onclick="closeNav()">about</a>
+     	<a href="index.html#portfolio" onclick="closeNav()">portfolio</a>
+	  	<!-- <a href="about.html" onclick="closeNav()">services</a> -->
+	  	<a href="mailto:hello@atelierbfgf.com" id="email" onclick="closeNav()">hello@atelierbfgf.com</a>
+	  </div>
+
+	</div>
+
+
+	<!-- Hero Content -->
+
+	<div class="BF">
+        <img src="assets/images/BF-White.svg" />
+        <img src="assets/images/BF-Black.svg" />
+    </div>
+
+  	<img src="assets/images/BGFG-logo.png" id="logo" alt="BFGF Logo">
+
+  	<div class="GF">
+        <img src="assets/images/GF-White.svg" />
+        <img src="assets/images/GF-Black.svg" />
+    </div>
+
+  </section>
+
+  <!-- Portfolio Section -->
+
+  <section id="portfolio">
+  	
+	<ul class="gallery">
+
+      <a href="meed.html"> 
+      <li class="meed"> 
+        <span class="text-content"><h2>Meed</h2><p>Identity - UX/UI</p></span>
+      </li>
+      </a>
+
+      <a href="pride.html"> 
+      <li class="pride"> 
+        <span class="text-content"><h2>San Francisco Pride Soap</h2><p>Identity - UX/UI</p></span>
+      </li>
+      </a>
+
+      <a href="goldensands.html"> 
+      <li class="goa"> 
+        <span class="text-content"><h2>Golden Sands</h2><p>Identity - UX/UI</p></span>
+      </li>
+      </a>      
+
+      <a href="circle.html"> 
+      <li class="circle"> 
+        <span class="text-content"><h2>Circle</h2><p>Identity - UX/UI</p></span>
+      </li>
+      </a>  
+
+    </ul>
+
+  </section>
+
+  <!-- About Us Section -->
+
+  <section id="aboutus">
+  	
+	
+      <p class="leadtext">BFGF is studio based in Montreal who are devoted to crafting beautiful websites. Founded by a couple (literally) who are avid travelers, we've most recently been working from Sydney, Auckland and Wellington. One half of our operation is Australian and the other Canadian, and you know what they say about Aussies & Canadians...well, we don't, but we figure it's got something to do with weather extremes. If we can handle life at both -40 and +40, we can probably manage any challenge you bring to us!. Our mission is to craft the right solution for each of our clients. We love eye catching, fun and bright design. But we also love subtlety and elegance. We are adventurous and love to try new things. If you have a direction, we would love to work with it. Our design flow starts with a brainstorming session, and creating a mood board for your target market. We choose typographic size, colour combinations and layout specifications based on what has been proven to work.</p>
+
+      <p class="lefttext">Tiffany is our design & UX/UI specialist. She handles creative and spends an unhealthy amount of time reading scientific publications regarding the psychological reasons behind her UX decisions. She works hard to ensure your end users will be interested and engaged in your product.</p>
+
+      <p class="righttext"> Our development guru Tim, ensures that all our code is the standard du jour. He has been in the game for 10 years & specializes in standards-based HTML, CSS & JavaScript web development. He is an extremely passionate technologist who loves a challenge!</p>
+
+  </section>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- NAV jQuery -->
+
+<script type="text/javascript">
+(function($) {          
+    $(document).ready(function(){                    
+        $(window).scroll(function(){                          
+            if ($(this).scrollTop() > 80 * window.innerHeight/100) {
+                $('#nav').fadeIn(500);
+            } else {
+                $('#nav').fadeOut(500);
+            }
+        });
+    });
+})(jQuery);
+</script>
+
 </body>
 </html>
