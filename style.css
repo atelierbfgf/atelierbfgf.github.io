@@ -55,11 +55,12 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh auto auto;
+  grid-template-rows: 100vh auto auto auto;
   grid-template-areas:
     "hero"
     "portfolio"
-    "aboutus";
+    "aboutus"
+    "copyright";
 }
 
 /* ===================== HOME PAGE ===================== */
@@ -128,7 +129,7 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  color: #707070;
+  color: #383838;
   margin-left: 2em;
 }
 
@@ -164,7 +165,7 @@ body {
 }
 
 #nav li span:hover {
-  border-bottom: 3px solid #707070;
+  border-bottom: 2px solid #383838;
 }
 
 #navlogo {
@@ -203,6 +204,7 @@ body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   font-family: futura-pt, sans-serif;
+  color: #383838;
 }
 
 .overlay a {
@@ -210,7 +212,7 @@ body {
   text-decoration: none;
   font-family: futura-pt, sans-serif;
   font-size: 2.250em;
-  color: #000;
+  color: #383838;
   display: block;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -221,10 +223,11 @@ body {
   font-size: 1.250em;
   margin-top: 0.75em;
   font-family: futura-pt, sans-serif;
+  color: #383838;
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: #000;
+  color: #383838;
   text-decoration: underline;
   font-family: futura-pt, sans-serif;
 }
@@ -245,7 +248,7 @@ body {
   transform: translateY(-50%);
   font-size: 1.938em;
   cursor: pointer;
-  color: #000;
+  color: #383838;
   margin-left: auto;
   padding-right: 0.8em;
 }
@@ -297,10 +300,10 @@ body {
 }
 
 #portfolio li:hover {
-  background: rgba(255,255,255, 1);
-  transition: .15s ease;
+  background: #FFF;
   z-index: 9;
   text-align: center;
+  transition: 0.5s ease;
 }
 
 span.text-content {
@@ -335,7 +338,7 @@ span.text-content p {
     "leadtext leadtext"
     "lefttext righttext";
   grid-column-gap: 1em;
-  grid-row-gap: 1em;
+  grid-row-gap: 2em;
   margin: 0 auto;
   font-family: futura-pt, sans-serif;
   padding-bottom: 25vh;
@@ -350,6 +353,18 @@ span.text-content p {
   margin-top: 25vh;  
 }
 
+.leadtext a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  border-bottom: 2px solid #383838;
+}
+
+.leadtext a:hover {
+  color: #ff0000;
+  border-bottom-color: #ff0000;
+}
+
 .lefttext {
   grid-area: lefttext;
   width: 30vw;
@@ -362,6 +377,18 @@ span.text-content p {
   width: 30vw;
   font-size: 20px;
   line-height: 30px;
+}
+
+#copyright {
+  grid-area: copyright;
+  position: relative; 
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: futura-pt, sans-serif;
+  padding-bottom: 2em;
 }
 
 /* ============ PROJECT IMAGE PAGES ============ */
@@ -396,7 +423,7 @@ span.text-content p {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  color: #707070;
+  color: #383838;
   margin-left: 2em;
 }
 
@@ -450,7 +477,7 @@ span.text-content p {
   font-size: 20px;
   font-family: futura-pt, sans-serif;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 500;
   padding-top: 2em;
   display: flex;
   justify-content: center;
@@ -461,11 +488,15 @@ span.text-content p {
   text-decoration: none;
 }
 
+.projects a:hover {
+  border-bottom: 3px solid #ff0000;
+}
+
 .mobileprojects {
-  font-size: 20px;
+  font-size: 18px;
   font-family: futura-pt, sans-serif;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 500;
   padding-top: 2em;
   display: flex;
   justify-content: center;
@@ -474,6 +505,10 @@ span.text-content p {
 .mobileprojects a {
   color: red;
   text-decoration: none;
+}
+
+.mobileprojects a:hover {
+  border-bottom: 3px solid #ff0000;
 }
 
 /* ============ PROJECT ABOUT PAGES ============ */
@@ -491,10 +526,11 @@ span.text-content p {
   grid-area: aboutcontent;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: 90vh auto auto;
   grid-template-areas:
     "leadtext leadtext"
-    "lefttext righttext";
+    "lefttext righttext"
+    "copyright copyright";
   grid-column-gap: 1em;
   grid-row-gap: 1em;
   margin: 0 auto;
@@ -510,7 +546,7 @@ span.text-content p {
   margin-left: 1em;
   font-size: 20px;
   font-family: futura-pt, sans-serif;
-  font-weight: bold;
+  font-weight: 500;
   color: #FF0000;
   /* Rotate Text */
   -webkit-transform: rotate(-90deg);
@@ -527,7 +563,7 @@ span.text-content p {
   margin-left: 0.5em;
   font-size: 20px;
   font-family: futura-pt, sans-serif;
-  font-weight: bold;
+  font-weight: 500;
   color: #FF0000;
   /* Rotate Text */
   -webkit-transform: rotate(-90deg);
@@ -545,7 +581,7 @@ span.text-content p {
   right: 0;
   font-size: 20px;
   font-family: futura-pt, sans-serif;
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
   /* Rotate Text */
   -webkit-transform: rotate(-270deg);
@@ -560,16 +596,20 @@ span.text-content p {
   text-decoration: none;
 }
 
+.about a:hover {
+  border-bottom: 3px solid #ff0000;
+}
+
 .titletop {
   position: absolute;
   top: 80px;
   left: 0;
   margin-left: 3em;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
   font-family: futura-pt, sans-serif;
-  font-weight: bold;
-  text-decoration: none;
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 .titletop a {
@@ -582,10 +622,10 @@ span.text-content p {
   top: 80px;
   right: 0;
   margin-right: 3em;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
   font-family: futura-pt, sans-serif;
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -594,21 +634,29 @@ span.text-content p {
   text-decoration: none;
 }
 
+.abouttop a:hover {
+  border-bottom: 3px solid #ff0000;
+}
+
 .abouttopcenter {
   position: absolute;
-  top: 80px;
+  top: 90px;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
   font-family: futura-pt, sans-serif;
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .abouttopcenter a {
   color: #FF0000;
   text-decoration: none;
+}
+
+.abouttopcenter a:hover {
+  border-bottom: 3px solid #ff0000;
 }
 
 /* ==================== MEDIA QUERIES ===================== */
@@ -635,9 +683,10 @@ span.text-content p {
   }
 
   .projects {
-    display: none;
+    
   }
 
+  
   .mobileprojects {
     display: none;
   }
@@ -710,11 +759,12 @@ span.text-content p {
   /* Portfolio item image page */
 
   .projects {
-    display: none;
+    font-size: 18px;
+    line-height: 20px;
   }
 
   .mobileprojects {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
   }
 
@@ -764,7 +814,7 @@ span.text-content p {
   }
 
   .abouttitle {
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 0em; 
   }
 
@@ -836,11 +886,11 @@ span.text-content p {
   /* Portfolio item image page */
 
   .projects {
-    display: none;
+    font-size: 18px;
   }
 
   .mobileprojects {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
   }
 
@@ -898,7 +948,7 @@ span.text-content p {
   }
 
   .abouttitle {
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 0em; 
   }
 

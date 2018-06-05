@@ -43,7 +43,7 @@
 	  	<a href="mailto:hello@atelierbfgf.com" id="rightify"><li><span>hello@atelierbfgf.com</span><li></a>
 	  </ul>
 
-	  <img src="assets/images/BGFG-logo.png" id="navlogo" alt="BFGF Logo">
+	  <a href="index.html"><img src="assets/images/BGFG-logo.png" id="navlogo" alt="BFGF Logo"></a>
 
 	  <div id="mobilenav"> 
 	    <span id="burger" onclick="openNav()">&#9776;</span>
@@ -90,26 +90,26 @@
 	<ul class="gallery">
 
       <a href="meed.html"> 
-      <li class="meed"> 
-        <span class="text-content"><h2>Meed</h2><p>Identity - UX/UI</p></span>
+      <li class="meed" id="meed"> 
+        <span class="text-content"><h2>meed</h2><p>identity - UX/UI</p></span>
       </li>
       </a>
 
       <a href="pride.html"> 
-      <li class="pride"> 
-        <span class="text-content"><h2>San Francisco Pride Soap</h2><p>Identity - UX/UI</p></span>
+      <li class="pride" id="pride"> 
+        <span class="text-content"><h2>san francisco pride soap</h2><p>identity - UX/UI</p></span>
       </li>
       </a>
 
       <a href="goldensands.html"> 
-      <li class="goa"> 
-        <span class="text-content"><h2>Golden Sands</h2><p>Identity - UX/UI</p></span>
+      <li class="goa" id="goa"> 
+        <span class="text-content"><h2>golden sands</h2><p>identity - UX/UI</p></span>
       </li>
       </a>      
 
       <a href="circle.html"> 
-      <li class="circle"> 
-        <span class="text-content"><h2>Circle</h2><p>Identity - UX/UI</p></span>
+      <li class="circle" id="circle"> 
+        <span class="text-content"><h2>circle</h2><p>identity - UX/UI</p></span>
       </li>
       </a>  
 
@@ -122,12 +122,16 @@
   <section id="aboutus">
   	
 	
-      <p class="leadtext">BFGF is a studio based in Montreal. We are devoted to crafting beautiful websites. Founded by a couple (literally) who are avid travelers, we've most recently been working from Sydney, Auckland and Wellington. One half of our operation is Australian and the other Canadian, and you know what they say about Aussies and Canadians...well, we don't, but we figure it's got something to do with weather extremes. If we can handle life at both -40 and +40, we can probably manage any challenge you bring to us. <br><br>Our mission is to craft the right solution for each of our clients. We love eye catching, fun and bright design. But we also love subtlety and elegance. We are adventurous and love to try new things. If you have a direction, we would love to work with it. Our design flow starts with a brainstorming session, and creating a mood board for your target market. We choose typographic size, colour combinations and layout specifications based on what has been proven to work.</p>
+      <p class="leadtext">BFGF is a studio based in Montreal. Founded by a couple (literally) who are avid travellers, we've most recently been working from Sydney, Auckland and Wellington. One half of our operation is Australian and the other Canadian, and you know what they say about Aussies and Canadians...well, we don’t. But we figure it's got something to do with weather extremes. If we can handle life at both -40 and +40, we can probably manage any challenge you bring to us. <br><br>Our mission is to craft the right solution for each of our clients. If you have a direction, we would love to work with it. If not, let’s collaborate. Our design flow starts with a brainstorming session, and creating a mood board for your target market. We choose typographic size, colour combinations and layout specifications based on what has been proven to work.</p>
 
       <p class="lefttext">Tiffany is our design and UX/UI specialist. She handles creative and spends an unhealthy amount of time reading scientific publications regarding the psychological reasons behind her UX decisions. She works hard to ensure your end users will be interested and engaged in your product.</p>
 
-      <p class="righttext"> Our development guru Tim, ensures that all our code is the standard du jour. He has been in the game for 10 years & specializes in standards-based HTML, CSS & JavaScript web development. He is an extremely passionate technologist who loves a challenge!</p>
+      <p class="righttext"> Our development guru Tim, ensures that all our code is the standard du jour. He has been in the game for 10 years and specializes in standards-based HTML, CSS and JavaScript web development. He is an extremely passionate technologist who loves a challenge!</p>
 
+  </section>
+
+  <section id="copyright">
+    Copyright &copy; 2018 Atelier BFGF. All Rights Reserved.
   </section>
 
 </div>
@@ -140,7 +144,7 @@
 (function($) {          
     $(document).ready(function(){                    
         $(window).scroll(function(){                          
-            if ($(this).scrollTop() > 80 * window.innerHeight/100) {
+            if ($(this).scrollTop() > 50 * window.innerHeight/100) {
                 $('#nav').fadeIn(500);
             } else {
                 $('#nav').fadeOut(500);
