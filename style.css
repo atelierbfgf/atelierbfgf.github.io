@@ -133,25 +133,25 @@ body {
   margin-left: 2em;
 }
 
-#nav li span#item1{
+#item1{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-#nav li span#item2{
+#item2{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 3em;
+  margin-left: 6em;
 }
 
-#nav li span#item3{
+/*#nav li span#item3{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   margin-left: 5em;
-}
+}*/
 
 #rightify li {
   position: absolute;
@@ -461,6 +461,14 @@ span.text-content p {
   padding-top: 18vh;
 }
 
+/* LAZY LOAD IMAGE PLACEHOLDER */
+
+img.lazy {
+  width: 100%; 
+  height: auto; 
+  display: block;
+}
+
 .contentimages{
   width: 70vw;
   margin-left: auto;
@@ -486,6 +494,7 @@ span.text-content p {
 .projects a {
   color: red;
   text-decoration: none;
+  border-bottom: 3px solid transparent;
 }
 
 .projects a:hover {
@@ -954,6 +963,19 @@ span.text-content p {
 
 }
 
+/* Mobile iPhone 6,7,8 Landscape */
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { 
+
+  .contentimages {
+    padding-top: 3em;
+  }
+
+}
+
 /* Mobile iPhone5 Landscape (to shrink nav) */
 
 @media only screen 
@@ -965,9 +987,11 @@ and (orientation : landscape) {
     height: 50px;
   }
 
+  .contentimages {
+    padding-top: 3em;
+  }
+
 }
-
-
 
 
 
