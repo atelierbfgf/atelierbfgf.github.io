@@ -461,14 +461,6 @@ span.text-content p {
   padding-top: 18vh;
 }
 
-/* LAZY LOAD IMAGE PLACEHOLDER */
-
-img.lazy {
-  width: 100%; 
-  height: auto; 
-  display: block;
-}
-
 .contentimages{
   width: 70vw;
   margin-left: auto;
