@@ -77,15 +77,15 @@
 
     <div class="contentimages">
       <ul>
-        <li><img src="assets/images/MEED-WP-1.jpg" alt="meed"></li>
-        <li><img src="assets/images/MEED-WP-2.jpg" alt="meed"></li>
-        <li><img src="assets/images/MEED-WP-3.jpg" alt="meed"></li>
-        <li><img src="assets/images/MEED-WP-4.jpg" alt="meed"></li>
-        <li><img src="assets/images/MEED-WP-5.jpg" alt="meed"></li>
-        <li><img src="assets/images/MEED-WP-6.jpg" alt="meed"></li>
-        <li><img src="assets/images/MEED-WP-7.jpg" alt="meed"></li>
-        <li><img src="assets/images/MEED-WP-8.jpg" alt="meed"></li>
-        <li><img src="assets/images/MEED-WP-9.jpg" alt="meed"></li>
+        <li><img src="spinner.gif" data-src="assets/images/MEED-WP-1.jpg" alt="meed"></li>
+        <li><img src="spinner.gif" data-src="assets/images/MEED-WP-2.jpg" alt="meed"></li> 
+        <li><img src="spinner.gif" data-src="assets/images/MEED-WP-3.jpg" alt="meed"></li>
+        <li><img src="spinner.gif" data-src="assets/images/MEED-WP-4.jpg" alt="meed"></li>
+        <li><img src="spinner.gif" data-src="assets/images/MEED-WP-5.jpg" alt="meed"></li>
+        <li><img src="spinner.gif" data-src="assets/images/MEED-WP-6.jpg" alt="meed"></li>
+        <li><img src="spinner.gif" data-src="assets/images/MEED-WP-7.jpg" alt="meed"></li>
+        <li><img src="spinner.gif" data-src="assets/images/MEED-WP-8.jpg" alt="meed"></li>
+        <li><img src="spinner.gif" data-src="assets/images/MEED-WP-9.jpg" alt="meed"></li>
         <li><span class="projects"><a href="index.html#meed">back to portfolio</a></span></li>
       </ul>
     </div>
@@ -97,6 +97,17 @@
 <section id="copyright">
   Copyright &copy; 2018 Atelier BFGF. All Rights Reserved.
 </section>
+
+<script>
+window.addEventListener('load', function(){
+    var allimages= document.getElementsByTagName('img');
+    for (var i=0; i<allimages.length; i++) {
+        if (allimages[i].getAttribute('data-src')) {
+            allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+        }
+    }
+}, false)
+</script>
 
 </body>
 </html>
