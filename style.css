@@ -50,6 +50,12 @@ body {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+/* Fix nav shift between about/images and about/text pages */
+
+html {
+  overflow-y: scroll;
+}
+
 /* ================== HOME PAGE GRID =================== */
 
 .container {
@@ -590,7 +596,7 @@ span.text-content p {
   position: absolute;   
   position: fixed;
   top: 50%;
-  margin-left: 1em;
+  left: 1%;
   font-size: 20px;
   font-family: futura-pt, sans-serif;
   font-weight: 500;
@@ -607,7 +613,7 @@ span.text-content p {
   position: absolute;   
   position: fixed;
   top: 50%;
-  margin-left: 0.5em;
+  left: 1%;
   font-size: 20px;
   font-family: futura-pt, sans-serif;
   font-weight: 500;
@@ -618,6 +624,14 @@ span.text-content p {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.longtextpos {
+  left: -1em;
+}
+
+.pridetextpos {
+  left: -3em;
 }
 
 .about {
@@ -644,6 +658,33 @@ span.text-content p {
 }
 
 .about a:hover {
+  border-bottom: 3px solid #ff0000;
+}
+
+.aboutproject {
+  position: absolute;
+  position: fixed;
+  top: 50%;
+  margin-right: -0.6em;
+  right: 0;
+  font-size: 20px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  /* Rotate Text */
+  -webkit-transform: rotate(-270deg);
+  -moz-transform: rotate(-270deg);
+  -ms-transform: rotate(-270deg);
+  -o-transform: rotate(-270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.aboutproject a {
+  color: #FF0000;
+  text-decoration: none;
+}
+
+.aboutproject a:hover {
   border-bottom: 3px solid #ff0000;
 }
 
@@ -843,6 +884,10 @@ span.text-content p {
     display: none;
   }
 
+  .aboutproject {
+    display: none;
+  }
+
   /* Portfolio item about page */
 
   #content {
@@ -986,6 +1031,10 @@ span.text-content p {
     display: none;
   }
 
+  .aboutproject {
+    display: none;
+  }
+
   .titletop {
     margin-left: 2em;
   }
@@ -1036,6 +1085,20 @@ span.text-content p {
     margin-left: 0em; 
   }
 
+  /* Mobile title text positional adjustments*/
+
+  .abouttitle {
+    left: 0em;
+  }
+
+  .longtextpos {
+    left: -1.5em;
+  }
+
+  .pridetextpos {
+    left: -3.75em;
+  }
+
 }
 
 /* Mobile iPhone 6,7,8 Landscape */
@@ -1084,6 +1147,26 @@ and (orientation : landscape) {
 
 }
 
+/* iPhone5 Portrait*/
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { 
+
+  .abouttitle {
+    left: -0.25em;
+  }
+
+  .longtextpos {
+    left: -1.75em;
+  }
+
+  .pridetextpos {
+    left: -4em;
+  }
+
+}
 
 /* iPad Pro Portrait */
 
