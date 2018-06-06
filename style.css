@@ -473,6 +473,15 @@ span.text-content p {
   height: auto;
 }
 
+/* Lazy Loading placeholder resize */
+
+.contentimages img[src*="spinner"]{
+  width: 100px;
+  height: auto;
+  display:block;
+  margin:auto;
+}
+
 .projects {
   font-size: 20px;
   font-family: futura-pt, sans-serif;
