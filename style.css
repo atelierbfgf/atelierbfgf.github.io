@@ -55,11 +55,12 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh auto auto auto;
+  grid-template-rows: 100vh auto auto auto auto;
   grid-template-areas:
     "hero"
     "portfolio"
     "aboutus"
+    "contactus"
     "copyright";
 }
 
@@ -341,7 +342,7 @@ span.text-content p {
   grid-row-gap: 2em;
   margin: 0 auto;
   font-family: futura-pt, sans-serif;
-  padding-bottom: 25vh;
+  padding-bottom: 15vh;
 }
 
 .leadtext {
@@ -350,7 +351,8 @@ span.text-content p {
   font-size: 24px;
   font-weight: 500;
   line-height: 34px;
-  margin-top: 25vh;  
+  margin-top: 15vh; 
+  align-self: center;
 }
 
 .leadtext a {
@@ -379,6 +381,34 @@ span.text-content p {
   line-height: 30px;
 }
 
+/* ========== CONTACT US & COPYRIGHT =========== */
+
+#contactus {
+  grid-area: contactus;
+  position: relative; 
+  width: 100%; 
+  text-align: center;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: futura-pt, sans-serif;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  border-top: 2px solid #d3d3d3;
+}
+
+#contactus a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+#contactus a:hover {
+  border-bottom: 2px solid #383838;
+}
+
 #copyright {
   grid-area: copyright;
   position: relative; 
@@ -388,7 +418,8 @@ span.text-content p {
   align-items: center;
   font-size: 14px;
   font-family: futura-pt, sans-serif;
-  padding-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 4em;
 }
 
 /* ============ PROJECT IMAGE PAGES ============ */
@@ -536,7 +567,7 @@ span.text-content p {
   grid-area: aboutcontent;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 90vh auto auto;
+  grid-template-rows: 85vh auto auto;
   grid-template-areas:
     "leadtext leadtext"
     "lefttext righttext"
@@ -691,13 +722,16 @@ span.text-content p {
   .abouttopcenter {
     display: none;
   }
-
-  .projects {
-    
-  }
-
   
   .mobileprojects {
+    display: none;
+  }
+
+  .BFmobile {
+    display: none;
+  }
+
+  .GFmobile {
     display: none;
   }
   
@@ -709,6 +743,24 @@ span.text-content p {
   
   .BF {
     display: none;
+  }
+
+  .BFmobile img{
+    height: 40vh;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .GFmobile img{
+    height: 40vh;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
   .GF {
@@ -754,17 +806,6 @@ span.text-content p {
       "righttext";
   }
 
-  .leadtext {
-    width: 80vw;
-  }
-
-  .lefttext {
-    width: 80vw;
-  }
-
-  .righttext {
-    width: 80vw;
-  }
 
   /* Portfolio item image page */
 
@@ -808,6 +849,9 @@ span.text-content p {
   .leadtext {
     width: 70vw;
     margin-top: 18vh;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
   }
 
   .lefttext {
@@ -840,6 +884,24 @@ span.text-content p {
 
   .GF {
     display: none;
+  }
+
+  .BFmobile img{
+    height: 40vh;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .GFmobile img{
+    height: 40vh;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
   
   /* Nav */
@@ -879,18 +941,6 @@ span.text-content p {
       "leadtext"
       "lefttext" 
       "righttext";
-  }
-
-  .leadtext {
-    width: 80vw;
-  }
-
-  .lefttext {
-    width: 80vw;
-  }
-
-  .righttext {
-    width: 80vw;
   }
 
   /* Portfolio item image page */
@@ -940,16 +990,19 @@ span.text-content p {
   }
 
   .leadtext {
-    width: 75vw;
+    width: 78vw;
     margin-top: 18vh;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
   }
 
   .lefttext {
-    width: 75vw;
+    width: 78vw;
   }
 
   .righttext {
-    width: 75vw;
+    width: 78vw;
   }
 
   .mobileprojects {
@@ -975,6 +1028,14 @@ and (orientation : landscape) {
     padding-top: 3em;
   }
 
+  .BFmobile{
+    display: none;
+  }
+
+  .GFmobile{
+    display: none;
+  }
+
 }
 
 /* Mobile iPhone5 Landscape (to shrink nav) */
@@ -991,6 +1052,32 @@ and (orientation : landscape) {
   .contentimages {
     padding-top: 3em;
   }
+
+  .BFmobile{
+    display: none;
+  }
+
+  .GFmobile{
+    display: none;
+  }
+
+}
+
+
+/* iPad Pro Portrait */
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1366px) 
+and (orientation : portrait) { 
+
+.BF {
+  display: none;
+}
+
+.GF {
+  display: none;
+}
 
 }
 
