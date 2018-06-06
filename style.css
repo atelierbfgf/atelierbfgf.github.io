@@ -56,6 +56,10 @@ html {
   overflow-y: scroll;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 /* ================== HOME PAGE GRID =================== */
 
 .container {
