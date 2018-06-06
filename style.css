@@ -870,6 +870,12 @@ span.text-content p {
     width: 70vw;
   }
 
+  #contactus {
+    width: 70vw;
+    margin: 0 auto;
+  }
+
+
   .mobileprojects {
     margin-top: 1em;
     margin-bottom: 4em;
@@ -1013,6 +1019,11 @@ span.text-content p {
 
   .righttext {
     width: 78vw;
+  }
+
+  #contactus{
+    width: 70vw;
+    margin: 0 auto;
   }
 
   .mobileprojects {
