@@ -748,19 +748,21 @@ span.text-content p {
   .BFmobile img{
     height: 40vh;
     position: absolute;
-    top: 5%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    margin: 0 auto;
+    left: 0;
+    right: 0; 
+    top: 25%;
+    transform: translateY(-50%);
   }
 
   .GFmobile img{
     height: 40vh;
     position: absolute;
-    top: 55%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    margin: 0 auto;
+    left: 0;
+    right: 0; 
+    bottom: 25%;
+    transform: translateY(50%);
   }
 
   .GF {
@@ -886,22 +888,24 @@ span.text-content p {
     display: none;
   }
 
-  .BFmobile img{
+   .BFmobile img{
     height: 40vh;
     position: absolute;
-    top: 5%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    margin: 0 auto;
+    left: 0;
+    right: 0; 
+    top: 25%;
+    transform: translateY(-50%);
   }
 
   .GFmobile img{
     height: 40vh;
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    margin: 0 auto;
+    left: 0;
+    right: 0; 
+    bottom: 25%;
+    transform: translateY(50%);
   }
   
   /* Nav */
