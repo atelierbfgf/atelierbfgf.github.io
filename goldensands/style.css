@@ -421,7 +421,7 @@ label {
 	transition: all 0.3s;
 }
 
-.img-full .carousel-item .img-fluid {
+.carousel-item .img-full {
   width:100%;
   height:100%;
 }
