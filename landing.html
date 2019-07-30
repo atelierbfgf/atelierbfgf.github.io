@@ -47,9 +47,8 @@
 					</select>
 					in <input type="text" name="name" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
 					<div class="nl-submit-wrap">
-						<button class="nl-submit" type="submit" value="Send">Submit!</button>
-						<!-- <input type="hidden" name="*redirect" value="https://www.atelierbfgf.com/meed.html" /> -->
-						<input type="hidden" name="*honeypot" />
+						<button class="nl-submit" type="submit" value="Send">Submit!!!</button>
+						<input type="hidden" name="*redirect" value="https://www.atelierbfgf.com/meed.html" />
 					</div>
 					<div class="nl-overlay"></div>
 				</form>
@@ -59,30 +58,5 @@
 		<script>
 			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
 		</script>
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-		<script>
-		$(function() {
-    		//hang on event of form with id=myform
-    		$("#nl-form").submit(function(e) {
-
-        	//prevent Default functionality
-        	e.preventDefault();
-
-        	//get the action-url of the form
-        	var actionurl = e.currentTarget.action;
-
-        	//do your own request an handle the results
-			$.ajax({
-    			method: 'POST',
-    			dataType: 'json',
-    			accepts: 'application/json',
-    			data: your_data,
-    			success: (data) => console.log(data),
-    			error: (err) => console.log(err)
-  			});
-  		});
-        </script>
 	</body>
 </html>
