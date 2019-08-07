@@ -20,7 +20,7 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .clearfix:after { clear: both; }
 
 body {
-	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-family: futura-pt, sans-serif;
 	color: #ffe8e7;
 	background: #E96D65;
 	font-weight: 300;
